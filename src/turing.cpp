@@ -11,6 +11,11 @@ struct action {
 };
 int check_ERROR(action* rules, int j)
 {
+    if (rules[0].state.length() != "00") {
+        cout << "Error in line = " << 1 << " in state" << endl;
+        cout << "Имя первого состояния должно быть нулевым!!!" << endl;
+        return 0;
+    }
     if (rules[j].state.length() > 2) {
         cout << "Error in line = " << j + 1 << " in state" << endl;
         return 0;
@@ -64,6 +69,7 @@ int main()
     rules = new action[N];
     input_main_row();
     input_rules(rules);
+    get_state(rules);
     delete[] rules;
     return 0;
 }
