@@ -42,11 +42,41 @@ struct action {
         }
         return 1;
     }
+
+    void printstring()
+    {
+        cout << main_row << endl << endl;
+    }
+
+    void MOVE(action* rules, int j)
+    {
+        int point = 0;
+        if (rules[j].move == "l")
+            point--;
+        if (rules[j].move == "r")
+            point++;
+        if (rules[j].move == "n")
+            point = point;
+        // main_row[point] = "1";
+        printstring();
+    }
+    void RUN(action* rules, int end)
+    {
+        cout << main_row[0];
+        for (int i = 0; i < end; i++) {
+            MOVE(rules, i);
+        }
+    }
+    void input_main_row()
+    {
+        cout << "Введите основную строку!!!" << endl;
+        cin >> main_row;
+    }
     void input_rules(action* rules)
     {
         cout << "Введите правила!" << endl;
-        int fl;
-        for (int i = 0; i < N; i++) {
+        int fl, i;
+        for (i = 0; i < N; i++) {
             cin >> rules[i].state;
             cin >> rules[i].expected_symbol;
             cin >> rules[i].new_symbol;
@@ -58,29 +88,7 @@ struct action {
             if (rules[i].next_state == "##")
                 break;
         }
-    }
-    void input_main_row()
-    {
-        cout << "Введите строку для обработки!" << endl;
-        cin >> main_row;
-    }
-    void printstring()
-    {
-        cout << main_row << endl;
-    }
-
-    void get_exp_symbol(action* rules, int point)
-    {
-        char exp[2];
-        strcpy(exp, rules[point].expected_symbol);
-    }
-
-    void RUN(action* rules)
-    {
-        int point = 0;
-        for (int i = 0; i < N; i++) {
-            get_exp_symbol(rules, i);
-        }
+        RUN(rules, i);
     }
     int main()
     {
@@ -89,7 +97,6 @@ struct action {
         rules = new action[N];
         input_main_row();
         input_rules(rules);
-        RUN(rules);
         delete[] rules;
         return 0;
     }
