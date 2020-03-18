@@ -1,11 +1,10 @@
 #include "head.h"
 int main()
 {
-    setlocale(LC_ALL, "russian");
-    action* rules;
-    rules = new action[N];
-    input_main_row();
-    input_rules(rules);
-    delete[] rules;
+    string main_row;
+    vector<action> rules(10000);
+    main_row = input_main_row(main_row);
+    input_rules(rules, main_row);
+
     return 0;
 }
