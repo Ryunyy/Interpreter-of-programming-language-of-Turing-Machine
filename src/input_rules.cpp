@@ -1,7 +1,7 @@
- #include "head.h"
+#include "head.h"
 extern int check_error(vector<action>& rules, int i);
 extern void RUN(vector <action> &rules, int end, string main_row, int point);
-void input_rules(vector <action> &rules, string main_row, int point)o
+void input_rules(vector <action> &rules, string main_row, int point)
 {
     int fl, i;
     for (i = 0; i < rules.size(); i++) {
@@ -17,4 +17,4 @@ void input_rules(vector <action> &rules, string main_row, int point)o
             break;
     }
     RUN(rules, i, main_row);
-} 
+}
