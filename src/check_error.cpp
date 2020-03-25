@@ -1,8 +1,8 @@
 #include "head.h"
 int check_error(vector<action>& rules, int i)
 {
-    if (rules[0].state != "00") {
-        cout << "Name of first state must be 00!!!" << endl;
+    if (rules[0].state != "q1") {
+        cout << "Name of first state must be q1!!!" << endl;
         return 0;
     }
     if (rules[i].state.length() > 10) {
