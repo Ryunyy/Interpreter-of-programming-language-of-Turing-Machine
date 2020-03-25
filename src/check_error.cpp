@@ -9,6 +9,15 @@ int check_error(vector<action>& rules, int i)
         cout << "Error in line = " << i + 1 << " in state!!!" << endl;
         return 0;
     }
+    if (rules[i].exp_symbol.length() > 1) {
+        cout << "Error in line = " << i + 1 << " in expected_symbol!!!" << endl;
+        return 0;
+    }
+    if (rules[i].new_symb.length() > 1) {
+        cout << "Error in line = " << i + 1 << "in new symbol!!!" << endl;
+        return 0;
+    }
+    if (rules[i].move.length() > 1) {
         cout << "Error in line = " << i + 1 << " in move!!!" << endl;
         return 0;
     }
