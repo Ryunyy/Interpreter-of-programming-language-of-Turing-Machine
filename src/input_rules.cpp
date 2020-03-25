@@ -18,4 +18,4 @@ void input_rules(vector<action>& rules, string main_row, int point)
             break;
     }
     RUN(rules, i, main_row, point);
-} 
+}

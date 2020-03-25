@@ -21,4 +21,4 @@ TEST_CASE("DO_s-test", "[DO_S-test]"){
 	REQUIRE(do_s("(456-325_", 8,"_",")") == "(456-325)");
 	REQUIRE(do_s("(_)(1)(2)(3)(4)", 1,"_","0") == "(0)(1)(2)(3)(4)");
 	cout << "TEST do_s-test.cpp is done";
-} 
+}

@@ -1,4 +1,4 @@
- #include "head.h"
+#include "head.h"
 string do_s(vector<action>& rules, string main_row, int i, int point)
 {
     string news = rules[i].new_symb;

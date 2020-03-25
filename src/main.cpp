@@ -9,4 +9,4 @@ int main()
     main_row = input_main_row(main_row);
     input_rules(rules, main_row, point);
     return 0;
-} 
+}
