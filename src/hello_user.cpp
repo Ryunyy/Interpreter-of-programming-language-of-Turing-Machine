@@ -1,3 +1,4 @@
+#include "head.h"
 void hello_user()
 {
     setlocale(LC_ALL, "RUS");
