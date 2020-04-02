@@ -3,12 +3,12 @@ COMPILER = g++ -std=c++11
 OBJ = $(COMPILER) $(CFLAGS) -c $< -o $@
 TOBJT = $(COMPILER) $(CFLAGS) -I for_test_special/catch2 -c $< -o $@
 .PHONY: clean
- 
+
 all: goal1 goal2 test3 test4 bin/turing.exe
-	
+
 goal1:
 	mkdir -p bin
-goal2: 
+goal2:
 	mkdir -p build
 test3:
 	mkdir -p build/src
@@ -41,6 +41,24 @@ build/src/run.o: src/run.cpp src/head.h
 
 build/src/do_s.o: src/do_s.cpp src/head.h
 	$(OBJ)
+
+bin/turing-test: build/test/test.o build/test/check_error-test.o build/test/do_s-test.o build/test/move-test.o build/test/print_string-test.o
+	$(COMPILER) $(CFLAGS) $^ -o $@
+
+build/test/test.o: test/test.cpp test/turing-test-head.h
+	$(TOBJT)
+
+build/test/check_error-test.o: test/check_error-test.cpp test/turing-test-head.h
+	$(TOBJT)
+
+build/test/do_s-test.o: test/do_s-test.cpp test/turing-test-head.h
+	$(TOBJT)
+
+build/test/move-test.o: test/move-test.cpp test/turing-test-head.h
+	$(TOBJT)
+
+build/test/print_string-test.o: test/print_string-test.cpp test/turing-test-head.h
+	$(TOBJT)
 
 clean:
 	rm -R build/src/*.o
