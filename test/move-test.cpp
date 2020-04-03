@@ -1,4 +1,4 @@
-#include "turing-test-head.h"
+#include "turing-test.h"
 int point(int point, string move)
 {
     if (move == "r")

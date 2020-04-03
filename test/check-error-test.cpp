@@ -1,4 +1,4 @@
-#include "turing-test-head.h"
+#include "turing-test.h"
 bool check_error(
         string state,
         string exp_symbol,

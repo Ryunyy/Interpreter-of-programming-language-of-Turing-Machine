@@ -48,19 +48,19 @@ build/src/hello_user.o: src/hello_user.cpp src/head.h
 bin/turing-test: build/test/test.o build/test/check_error-test.o build/test/do_s-test.o build/test/move-test.o build/test/print_string-test.o
 	$(COMPILER) $(CFLAGS) $^ -o $@
 
-build/test/test.o: test/test.cpp test/turing-test-head.h
+build/test/test.o: test/turing-test.cpp test/turing-test.h
 	$(TOBJT)
 
-build/test/check_error-test.o: test/check_error-test.cpp test/turing-test-head.h
+build/test/check_error-test.o: test/check_error-test.cpp test/turing-test.h
 	$(TOBJT)
 
-build/test/do_s-test.o: test/do_s-test.cpp test/turing-test-head.h
+build/test/do_s-test.o: test/do_s-test.cpp test/turing-test.h
 	$(TOBJT)
 
-build/test/move-test.o: test/move-test.cpp test/turing-test-head.h
+build/test/move-test.o: test/move-test.cpp test/turing-test.h
 	$(TOBJT)
 
-build/test/print_string-test.o: test/print_string-test.cpp test/turing-test-head.h
+build/test/print_string-test.o: test/print_string-test.cpp test/turing-test.h
 	$(TOBJT)
 
 clean:
