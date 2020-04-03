@@ -35,3 +35,4 @@ void hello_user()
     cout << "\t\t\t04 0 1 r ##" << endl;
     cout << "\t\tПосле выполнения программы будет выведено: wq01" << endl
          << endl;
+}
