@@ -3,7 +3,6 @@ extern int check_error(vector<action>& rules, int i);
 extern void RUN(vector<action>& rules, string main_row);
 void input_rules(vector<action>& rules, string main_row)
 {
-    int fl;
     action element;
     int fl, i;
     for (i = 0; 1; i++) {
