@@ -1,4 +1,5 @@
 #include "head.h"
+
 int check_error(vector <action> &rules)
 {
 	if (rules[0].state != "q1")

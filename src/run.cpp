@@ -1,8 +1,10 @@
 #include "head.h"
+
 extern void pointer (int point, string row);
 extern void print_string(string row);
 extern int move(int point, vector<action>& rules, int i);
 extern string do_s(vector<action>& rules, string main_row, int i, int point);
+
 void RUN(vector <action> &rules, string main_row)
 {
 	int point = 0;
