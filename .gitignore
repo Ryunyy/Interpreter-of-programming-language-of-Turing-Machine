@@ -10,3 +10,4 @@ comp.cpp
 *.json
 rules.txt
 string.txt
+bin/turing-test
