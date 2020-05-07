@@ -13,7 +13,7 @@ TEST_CASE("DO_s-test", "[DO_S-test]")
     rules[0].new_symb = "0";
     rules[0].move = "r";
     rules[0].next_state = "halt";
-    main_row = "1100111001";
+    std::string main_row = "1100111001";
     REQUIRE(do_s(rules, main_row, 0, 5) == "1100101001");
     cout << "test [do_s 1] successful" << endl;
 

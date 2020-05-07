@@ -1,3 +1,4 @@
+#include "turing-test.h"
 int point(int point, vector<action>& rules, int i)
 {
     if (rules[i].move == "r")

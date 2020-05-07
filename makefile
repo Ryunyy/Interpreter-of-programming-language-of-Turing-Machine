@@ -58,7 +58,7 @@ bin/turing-test: build/test/turing-test.o build/test/check_error-test.o build/te
 build/test/turing-test.o: test/turing-test.cpp test/turing-test.h
 	$(TOBJT)
 
-build/test/check_error-test.o: test/check_error-test.cpp test/turing-test.h
+build/test/check_error-test.o: test/check-error-test.cpp test/turing-test.h
 	$(TOBJT)
 
 build/test/do_s-test.o: test/do_s-test.cpp test/turing-test.h
