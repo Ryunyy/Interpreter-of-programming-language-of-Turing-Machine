@@ -73,6 +73,11 @@ build/test/print_string-test.o: test/print_string-test.cpp test/turing-test.h
 build/test/input_main_row-test.o: test/input_main_row-test.cpp test/turing-test.h
 	$(TOBJT)
 
+build/test/pointer-test.o: test/pointer-test.cpp test/turing-test.h
+	$(TOBJT)
+
+
+
 run-app: bin/turing.exe
 	./bin/turing.exe
 
