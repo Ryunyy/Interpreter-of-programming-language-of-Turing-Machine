@@ -78,5 +78,5 @@
   rules[0].state = "q1"; rules[0].exp_symbol = "1"; rules[0].new_symb = "0"; rules[0].move = "n"; rules[0].next_state = "halt";
   REQUIRE(point(214, rules, 0) == 214);
   cout << "test [move 22] successful" << endl;
-  cout << endl <<"TEST PRINTSTRING.cpp is done" << endl;
+  cout <<"TEST PRINTSTRING.cpp is done" << endl;
 } 
