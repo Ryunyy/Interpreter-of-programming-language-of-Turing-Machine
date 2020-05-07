@@ -8,3 +8,5 @@ build
 comp
 comp.cpp
 *.json
+rules.txt
+string.txt
