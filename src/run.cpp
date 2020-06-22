@@ -9,7 +9,7 @@ void RUN(vector<action>& rules, string main_row)
     int point = setpoint(main_row);
     int i = 0;
     string current_state = rules[0].state;
-    while (current_state != "halt") {
+    while (current_state != "##") {
         if (current_state == rules[i].state
             && main_row[point] == rules[i].exp_symbol[0]) {
             main_row = do_s(rules, main_row, i, point);

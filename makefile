@@ -5,7 +5,13 @@ TOBJT = $(COMPILER) $(CFLAGS) -I for_test_special/catch2 -c $< -o $@
 
 .PHONY: clean
 
-all: goal1 goal2 test3 test4 bin/turing.exe
+all: goal1 goal2 test3 test4 text1 text2 bin/turing.exe
+
+text1: 
+	touch string.txt
+
+text2: 
+	touch rules.txt
 
 goal1:
 	mkdir -p bin
@@ -91,3 +97,5 @@ clean:
 	rm -R bin/turing-test
 	rm -R build
 	rm -R bin
+	rm -R string.txt
+	rm -R rules.txt

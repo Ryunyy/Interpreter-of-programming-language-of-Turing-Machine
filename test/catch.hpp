@@ -1,5 +1,5 @@
 /*
- *  Catch v2.10.2
+ *  Catch v2.12.2
  *  Generated: 2020-05-25 15:09:23.791719
  *  ----------------------------------------------------------
  *  This file has been merged from multiple headers. Please don't edit it directly
