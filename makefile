@@ -1,11 +1,11 @@
 CFLAGS = -Wall -Werror
 COMPILER = g++ -std=c++11
 OBJ = $(COMPILER) $(CFLAGS) -c $< -o $@
-TOBJT = $(COMPILER) $(CFLAGS) -I for_test_special/catch2 -c $< -o $@
+TOBJT = $(COMPILER) $(CFLAGS) -I test/catch -c $< -o $@
 
 .PHONY: clean
 
-all: goal1 goal2 test3 test4 text1 text2 bin/turing.exe
+all: goal1 goal2 test3 test4 text1 text2 bin/turing.exe bin/turing-test
 
 text1: 
 	touch string.txt
